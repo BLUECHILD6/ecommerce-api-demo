@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.ecommerce.model.Product;
 import com.example.ecommerce.model.Tag;
 import com.example.ecommerce.service.TagService;
 
@@ -31,10 +32,12 @@ public class TagController {
 		return tagService.getAllTag();
 	}
 	
-	@GetMapping("/{ID}")
-	public Tag getTagByID(@PathVariable Long ID) {
-		return tagService.ReadByID(ID);
-	}
+//	@GetMapping("/{ID}")
+//	public Tag getTagByID(@PathVariable Long ID) {
+//		//return tagService.ReadByID(ID);
+//		Tag BlankTag = new Tag();
+//		return BlankTag;
+//	}
 	
 	@DeleteMapping("/{ID}")
 	public String deleteTag(@PathVariable Long ID) {
